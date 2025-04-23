@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="img_n_name">
+            <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="José Carlos Casares">
+            <p>José Carlos<br>Casares</p>
+        </div>
+        <p>EMAIL ID: josecarlos.casares@example.com</p>
+        <p>PHONE NO.: (682) 437 0409</p>
+        <p>DOB: 1983-11-01</p>
+        <p>ADDRESS: Mineral del Monte, Colima, Mexico</p>
+    </div>
+    <style> 
+        body{
+            background-color: rgb(2, 95, 95);
+        }
+
+        .card{
+            background-color: rgb(1, 50, 50);
+            width: 25vw;
+            padding: 20px;
+            border-radius: 10px;
+            color: aliceblue;
+            border: 1px rgb(0, 0, 0) solid;
+        }
+
+        .img_n_name{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align: center;
+            background-color: rgb(1, 29, 29);
+            padding: 10px;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgb(3, 130, 130);
+        }
+
+        .card:hover{
+            transform: scale(1.05);
+            border: 1px solid cyan;
+            box-shadow: 0 0 20px rgb(3, 130, 130);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</body>
+</html>
