@@ -44,6 +44,10 @@ const createCard = (key) => {
 	namePara.innerHTML = `${key.name.first}<br />${key.name.last}`;
 	imageNameContainer.appendChild(namePara);
 
+	const genderPara = document.createElement("p");
+	genderPara.innerHTML = `GENDER: ${key.gender}`;
+	newCard.appendChild(genderPara);
+
 	const emailPara = document.createElement("p");
 	emailPara.innerHTML = `EMAIL ID: ${key.email}`;
 	newCard.appendChild(emailPara);
