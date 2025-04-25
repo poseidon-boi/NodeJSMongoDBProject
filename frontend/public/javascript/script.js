@@ -70,19 +70,22 @@ const initApp = async () => {
 	const params = new URLSearchParams(window.location.search);
 	const uuid = params.get("uuid");
 	console.log(uuid);
-	const request = await fetch("http://localhost:3500/people/", {
-		mode: "cors",
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body:
-			uuid === null
-				? null
-				: JSON.stringify({
-						uuid: uuid,
-				  }),
-	});
+	const request = await fetch(
+		"https://cardprojectbackend.onrender.com/people/",
+		{
+			mode: "cors",
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body:
+				uuid === null
+					? null
+					: JSON.stringify({
+							uuid: uuid,
+					  }),
+		}
+	);
 	console.log(request);
 	const response = await request.json();
 	console.log(response);
