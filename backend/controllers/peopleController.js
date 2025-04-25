@@ -1,10 +1,3 @@
-const data = {
-	people: require("../model/data.json"),
-	setPeople: function (data) {
-		this.people = data;
-	},
-};
-
 const mongoose = require("mongoose");
 const Human = require("../model/Human");
 
