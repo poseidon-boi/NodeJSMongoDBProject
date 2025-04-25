@@ -30,6 +30,7 @@ h1 {
 	color: aliceblue;
 	border: 1px rgb(0, 0, 0) solid;
 	margin: 1rem;
+	overflow-wrap: break-word;
 }
 
 .img_n_name {
@@ -53,4 +54,16 @@ p {
 	border: 1px solid cyan;
 	box-shadow: 0 0 20px rgb(3, 130, 130);
 	transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 640px) {
+	.card {
+		width: 90vw;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.card {
+		width: 40vw;
+	}
 }
