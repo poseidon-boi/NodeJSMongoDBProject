@@ -56,14 +56,14 @@ p {
 	transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 640px) {
-	.card {
-		width: 90vw;
-	}
-}
-
 @media screen and (max-width: 1024px) {
 	.card {
 		width: 40vw;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.card {
+		width: 90vw;
 	}
 }
