@@ -5,6 +5,9 @@ const data = {
 	},
 };
 
+const mongoose = require("mongoose");
+const Human = require("../model/Human");
+
 // const getAllPeople = (req, res) => {
 // 	res.json(data.people);
 // };
@@ -63,12 +66,24 @@ const data = {
 // 	res.json(data.people);
 // };
 
-const getPeople = (req, res) => {
-	const person = data.people.find((per) => per.uuid === req.body.uuid);
-	if (!person) {
-		res.json(data.people);
+const getPeople = async (req, res) => {
+	// const person = data.people.find((per) => per.uuid === req.body.uuid);
+	// await mongoose.connect(process.env.DATABASE_URI, {});
+	if (req.body.uuid === undefined) {
+		const mongooseHumans = await Human.find({});
+		console.log(mongooseHumans.length);
+		res.json(mongooseHumans);
+	} else {
+		const mongooseHuman = await Human.find({ uuid: req.body.uuid }).exec();
+		console.log(mongooseHuman);
+		res.json(mongooseHuman);
 	}
-	res.json(person);
+
+	// console.log(typeof mongooseHuman);
+	// console.log(mongooseHuman.length);
+
+	// console.log("Connected to DB:", mongoose.connection);
+	// console.log(Human);
 };
 
 module.exports = {

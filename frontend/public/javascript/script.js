@@ -65,7 +65,7 @@ const createCard = (key) => {
 	newCard.appendChild(uuidPara);
 };
 
-async function initApp() {
+const initApp = async () => {
 	console.log(window);
 	const params = new URLSearchParams(window.location.search);
 	const uuid = params.get("uuid");
@@ -95,6 +95,6 @@ async function initApp() {
 			createCard(key);
 		});
 	}
-}
+};
 
 initApp();

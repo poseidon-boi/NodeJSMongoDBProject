@@ -6,20 +6,25 @@
 
 body {
 	background-color: rgb(2, 95, 95);
-	display: flex;
-	justify-content: center;
+}
+
+h1 {
+	text-align: center;
+	color: aliceblue;
+	font-size: 4rem;
+	padding: 5rem;
 }
 
 .card-container {
 	display: flex;
-	flex-direction: column;
-	/* height: 100vh;
-	overflow-y: auto; */
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .card {
 	background-color: rgb(1, 50, 50);
-	width: 30vw;
+	width: 28vw;
 	padding: 20px;
 	border-radius: 10px;
 	color: aliceblue;

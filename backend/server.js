@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -5,8 +6,12 @@ const { logger } = require("./middleware/logEvents");
 const cors = require("cors");
 const errorHandler = require("./middleware/errorHandler");
 const corsOptions = require("./config/corsOptions");
-
+const mongoose = require("mongoose");
+const connectDB = require("./config/dbConn");
 const PORT = process.env.port || 3500;
+
+// Connect to MongoDB
+connectDB();
 
 // Custom middleware logger
 app.use(logger);
@@ -69,7 +74,10 @@ app.all("*", (req, res) => {
 
 app.use(errorHandler);
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+mongoose.connection.once("open", () => {
+	console.log("Connected to MongoDB");
+	app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+});
 
 /** This code was used to extract the 100 results from the random user api and
  *  get only the parts of the json data useful in the project
