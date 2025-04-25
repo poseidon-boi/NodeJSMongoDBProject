@@ -4,7 +4,7 @@ const whitelist = [
 	"http://127.0.0.1:5500",
 	"http://localhost:3500",
 	"http://127.0.0.1:3500",
-	"http://cardsproject-nbig70nmt-armaan-guptas-projects-b425c607.vercel.app/",
+	"http://cardsproject-git-main-armaan-guptas-projects-b425c607.vercel.app/",
 	"https://cardsproject.vercel.app/",
 ];
 const corsOptions = {
