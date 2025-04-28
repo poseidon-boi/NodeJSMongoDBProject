@@ -11,3 +11,5 @@ https://cardsproject.vercel.app/
 Just visiting the URL will cause all of the cards to deploy. If the UUID of one of the cards is passed as a parameter in the URL, only that card will be displayed. Here's how you can do it.
 
 https://cardsproject.vercel.app/?uuid=uuid-of-card
+
+Alternatively, you can just click the UUID of the card to achieve the same thing.
