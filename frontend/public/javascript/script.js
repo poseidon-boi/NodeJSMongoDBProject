@@ -65,8 +65,16 @@ const createCard = (key) => {
 	newCard.appendChild(locationPara);
 
 	const uuidPara = document.createElement("p");
-	uuidPara.innerHTML = `UUID: ${key.uuid}`;
+	uuidPara.innerHTML = `UUID: `;
 	newCard.appendChild(uuidPara);
+
+	const uuidLink = document.createElement("a");
+	uuidLink.innerHTML = `${key.uuid}`;
+	uuidLink.setAttribute(
+		"href",
+		`https://cardsproject.vercel.app/?uuid=${key.uuid}`
+	);
+	uuidPara.appendChild(uuidLink);
 };
 
 const initApp = async () => {
@@ -94,7 +102,7 @@ const initApp = async () => {
 	const response = await request.json();
 	console.log(response);
 	console.log(cardContainer);
-	// cardContainer.innerHTML = "";
+	cardContainer.innerHTML = "";
 	if (response.length === undefined) {
 		createCard(response);
 	} else {

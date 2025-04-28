@@ -6,6 +6,7 @@
 
 body {
 	background-color: rgb(2, 95, 95);
+	color: aliceblue;
 }
 
 h1 {
@@ -47,6 +48,20 @@ h1 {
 
 p {
 	padding: 0.4rem;
+}
+
+a {
+	color: aliceblue;
+	transition-property: color;
+	transition-duration: 0.7s;
+	transition-timing-function: ease;
+}
+
+a:hover {
+	color: aquamarine;
+	transition-property: color;
+	transition-duration: 0.7s;
+	transition-timing-function: ease;
 }
 
 .card:hover {
